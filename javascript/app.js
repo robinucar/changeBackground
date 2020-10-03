@@ -61,12 +61,27 @@ function changeColors() {
 function addColor() {
   let userInput = document.querySelector('.colorInput');
 
-  if (colors.indexOf(userInput.value) === -1) {
-    //change background color to new color
-    document.querySelector('body').style.backgroundColor = userInput.value;
+  // user input value from string to array
+  //input = brown:coffe brown
+  //output = ["brown", "coffe brown"]
+ const colorData = userInput.value.split(":");
 
-    //add new color to colors list
-    colors.push(userInput.value);
+ // from array to object
+ const colorObject = {
+   name: colorData[0],
+   motto: colorData[1],
+ }
+
+
+
+  if (colors.findIndex(color => color.name === colorObject.name) === -1) {
+    //change background color and description to new color
+    document.querySelector('body').style.backgroundColor = colorObject.name;
+    document.querySelector('#colorName').textContent = colorObject.name;
+    document.querySelector('#colorDescription').textContent = colorObject.motto;
+
+    //add new color and description to colors list
+    colors.push(colorObject)
 
     //clear user input value
 
