@@ -44,8 +44,12 @@ function addColor() {
 
     //clear user input value
 
-    userInput.value = "";
+    userInput.value = '';
     userInput.focus();
+
+    //input cannot be empty
+  } else if (userInput.value === '') {
+    alert('Pleae add a color');
   } else {
     alert(userInputValue + ' is already exist');
   }
