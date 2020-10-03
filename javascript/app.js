@@ -44,11 +44,16 @@ function changeColors() {
 
   // get color colorName
 
-  document.querySelector('#colorName').textContent = colors[randomIndex];
+  document.querySelector('#colorName').textContent = colors[randomIndex].name;
+
+  // get color descriptions
+
+  document.querySelector('#colorDescription').textContent = colors[randomIndex].motto;
+
 
   //change colors randomly
 
-  document.querySelector('body').style.backgroundColor = colors[randomIndex];
+  document.querySelector('body').style.backgroundColor = colors[randomIndex].name;
 }
 
 //add colors
