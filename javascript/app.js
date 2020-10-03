@@ -1,6 +1,27 @@
 // background colors array
 
-const colors = ['red', 'blue', 'green', 'gray', 'purple'];
+const colors = [
+  {
+    name: 'red',
+    motto: 'Rose Red',
+  },
+  {
+    name: 'blue',
+    motto: 'Ocean Blue',
+  },
+  {
+    name: 'gray',
+    motto: 'Smoke Gray',
+  },
+  {
+    name: 'green',
+    motto: 'Grass Green',
+  },
+  {
+    name: 'purple',
+    motto: 'Deep Purple',
+  }
+];
 
 //reach buttons
 
