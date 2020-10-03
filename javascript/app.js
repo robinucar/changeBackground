@@ -33,11 +33,20 @@ function changeColors() {
 //add colors
 
 function addColor() {
-  const userInputValue = document.querySelector('.colorInput').value;
-  document.querySelector('body').style.backgroundColor = userInputValue;
+  let userInput = document.querySelector('.colorInput');
 
-  //add new color to colors list
+  if (colors.indexOf(userInput.value) === -1) {
+    //change background color to new color
+    document.querySelector('body').style.backgroundColor = userInput.value;
 
-  colors.indexOf(userInputValue) === -1 ? colors.push(userInputValue) : alert("Color is already exist...");
+    //add new color to colors list
+    colors.push(userInput.value);
 
+    //clear user input value
+
+    userInput.value = "";
+    userInput.focus();
+  } else {
+    alert(userInputValue + ' is already exist');
+  }
 }
