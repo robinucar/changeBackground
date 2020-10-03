@@ -35,4 +35,9 @@ function changeColors() {
 function addColor() {
   const userInputValue = document.querySelector('.colorInput').value;
   document.querySelector('body').style.backgroundColor = userInputValue;
+
+  //add new color to colors list
+
+  colors.indexOf(userInputValue) === -1 ? colors.push(userInputValue) : alert("Color is already exist...");
+
 }
