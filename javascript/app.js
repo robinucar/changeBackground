@@ -18,6 +18,10 @@ function changeColors() {
 
   const randomIndex = Math.floor((Math.random() * colors.length));
 
+  // get color colorName
+
+  document.querySelector("#colorName").textContent = colors[randomIndex]
+
   //change colors randomly
 
   document.querySelector("body").style.backgroundColor = colors[randomIndex];
